@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-import sys
-import hidden_4 as hidden
+import hidden_4
 
-if __name__ != "__main__":
-    exit()
-
-for name in dir(hidden):
-    if name[0:2] != "__":
+if __name__ == "__main__":
+    names = [name for name in dir(hidden_4) if not name.startswith("__")]
+    for name in sorted(names):
         print(name)
